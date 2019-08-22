@@ -10,10 +10,10 @@
 <body onload="Content()">
 	<div id="background"></div>
 	<section>
-		<button id="backButton" onclick="back()"><i class="fas fa-long-arrow-alt-left"></i></button>
+		<button id="backButton" onclick="goBack()"><i class="fas fa-long-arrow-alt-left"></i></button>
 		<div id="content">
 			<img id="title-img" src="./images/stemwijzer.png">
-			<button class="btn" onclick="loadStatements()">Start</button>
+			<button class="btn" onclick="Statements()">Start</button>
 		</div>
 
 		<div id="statements">
@@ -25,7 +25,16 @@
 			<button id="skipbutton" onclick="setChoice('')">Sla deze vraag over <i class="fa fa arrow-alt-right"></i></button>
 		</div>
 
-				
+		<div id="selectStatements">
+
+			<h2>Zijn er onderwerpen die u extra belangrijk vindt?</h2>
+
+			<p>Aangevinkte stellingen tellen extra mee bij het berekenen van het resulaat.</p>
+
+			<ul id="statements-ul"></ul>
+
+			<button class="btn" onclick="">Ga verder</button>
+		</div>	
 	</section>
 	<script src="http://stemwijzer.dvc-icta.nl/data.js"></script>
 	<script src="stemwijzer.js"></script>
