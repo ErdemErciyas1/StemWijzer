@@ -5,13 +5,10 @@ var statement_title = document.getElementById('statement-title');
 var statement = document.getElementById('statement');
 var selectStatements = document.getElementById('selectStatements');
 var chooseParties = document.getElementById('chooseParties');
-var statement_ul = document.getElementById('statements-ul');
 var statement_title = document.getElementById('statement-title');
-var parties_ul = document.getElementById('parties-ul');
 var statement_count = 0;
 var score = document.getElementById('score');
 var results = [];
-var points = 0; 
 var opinions = [];
 
 
