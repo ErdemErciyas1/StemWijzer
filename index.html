@@ -19,10 +19,10 @@
 		<div id="statements">
 			<h2 id="statement-title"></h2>
 			<p id="statement"></p>		
-			<button class="btn" id="" onclick="">Eens</button>
-			<button class="btn" id="" onclick="">Geen van beide</button>
-			<button class="btn" id="" onclick="">oneens</button>
-			<button id="skipbutton" onclick="setChoice('')">Sla deze vraag over <i class="fa fa arrow-alt-right"></i></button>
+			<button class="btn" id="pro" onclick="skipChoice('pro')">Eens</button>
+			<button class="btn" id="ambivalent" onclick="skipChoice('ambivalent')">Geen van beide</button>
+			<button class="btn" id="contra" onclick="skipChoice('contra')">oneens</button>
+			<button id="skip-btn" onclick="skipChoice('')">Sla deze vraag over <i class="fas fa-long-arrow-alt-right"></i></button>
 		</div>
 
 		<div id="selectStatements">
@@ -33,8 +33,33 @@
 
 			<ul id="statements-ul"></ul>
 
-			<button class="btn" onclick="">Ga verder</button>
+			<button class="btn" onclick="loadChooseParties()">Ga verder</button>
 		</div>	
+		<div id="chooseParties">
+
+			<h2>Welke partijen wilt u meenemen in het resultaat?</h2>
+
+			<ul id="parties-ul">
+
+				<input type="radio" name="filter_choice" class="filter_choice">Alle grote partijen</input>
+
+				<input type="radio" name="filter_choice" class="filter_choice">Alle seculiere partijen</input>
+
+				<input type="radio" name="filter_choice" class="filter_choice" checked>Alle partijen</input>
+
+			</ul>
+
+			<button class="btn" onclick="loadScore()">Naar Resultaat</button>
+
+		</div>	
+
+
+
+		<div id="score"></div>		
+
+	</section>
+
+		
 	</section>
 	<script src="http://stemwijzer.dvc-icta.nl/data.js"></script>
 	<script src="stemwijzer.js"></script>

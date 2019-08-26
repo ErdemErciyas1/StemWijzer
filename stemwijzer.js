@@ -23,6 +23,27 @@ function Content(){
 	chooseParties.style.display = 'none';
 }
 
+function returnOpinions(){ //wanneer ik terug ga worden de geklikte buttons onthouden
+
+	var btn = document.getElementsByClassName('btn');
+
+	for (var i = 0; i < btn.length; i++) {
+
+        btn[i].style.backgroundColor = "black";
+
+    }	
+
+
+
+	if(opinions[statement_count] != null && opinions[statement_count] != ''){
+
+		var btn = document.getElementById(opinions[statement_count]);
+
+		btn.style.backgroundColor = 'green';
+
+	}
+
+}
 
 
 function Statements(){
@@ -33,7 +54,7 @@ function Statements(){
 	statement_title.innerHTML = statement_count + 1 + '.' + subjects[statement_count].title;
 	statement.innerHTML = subjects[statement_count].statement;
 
-	showSelectedOpinions();	
+	returnOpinions();	
 }
 
 
@@ -57,22 +78,64 @@ function Statements(){
 	
 	}
 
-	
-function goBack(){
+	function goBack()
+	{
 
-	if(statement_count == 0){
+		if(statement_count == 0){
 
-		Content();
+			Content();
+			}
 
-	}else{
+		else
+		{
 
 		statement_count -= 1;
 
-		Statements();
+			Statements();
+		}
 
+	}
+	function loadChooseStatements(){
+		
+		selectStatements.style.display = 'block';
+
+		statements.style.display = 'none';
+	
+		chooseParties.style.display = 'none';
+	
+		back_btn.setAttribute("onclick", "back()");
+		
+	}
+
+	function loadChooseParties(){
+
+		results = [];
+	
+		selectStatements.style.display = 'none';
+	
+		score.style.display = 'none';
+	
+		chooseParties.style.display = 'block';
+	
+		back_btn.setAttribute("onclick", "loadChooseStatements()");
+	
 	}
 
 	
+	
 
-}
+
+	
+	
+	
+	
+	
+
+
+
+	
+
+	
+
+
 
